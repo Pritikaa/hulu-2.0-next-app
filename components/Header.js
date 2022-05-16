@@ -8,7 +8,7 @@ import {
   SearchIcon,
   UserIcon,
 } from "@heroicons/react/outline";
-import { useRouter } from "react-router-dom";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const router=useRouter();
