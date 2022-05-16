@@ -8,12 +8,15 @@ import {
   SearchIcon,
   UserIcon,
 } from "@heroicons/react/outline";
+import { useRouter } from "react-router-dom";
 
 const Header = () => {
+  const router=useRouter();
+
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
       <div className="flex flex-grow justify-evenly max-w-2xl">
-        <HeaderItem title="HOME" Icon={HomeIcon} />
+        <HeaderItem title="HOME" Icon={HomeIcon} onClick={() => router.push('/')}/>
         <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
         <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
         <HeaderItem title="COLLECTIONS" Icon={CollectionIcon} />
